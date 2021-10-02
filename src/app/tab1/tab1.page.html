@@ -7,9 +7,44 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-     <h1>Welcome to My Awesome App</h1>
-     <div id="firebaseui-auth-container"></div>
-     <div id="loader">Loading...</div>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">e-mail</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">password</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-button size="small" expand="full">Log In</ion-button>
+    <br>
+    <ion-card-content>
+      <ion-button size="small" expand="full" color="danger" (click)="onLoginGoogle()">
+        <ion-icon name="logo-google"></ion-icon>
+        google
+      </ion-button>
+
+
+      <ion-button size="small" expand="full" color="primary" (click)="onLoginFacebook()">
+        <ion-icon name="logo-facebook"></ion-icon>
+        facebook
+      </ion-button>
+
+
+      <ion-button size="small" expand="full" color="success" (click)="onLoginTwitter()">
+        <ion-icon name="logo-twitter"></ion-icon>
+        twitter
+      </ion-button>
+    </ion-card-content>
+    <ion-button size="medium" expand="full" color="dark" value="logout" #logout (click)="onLogOut(logout)">
+
+      Logout
+    </ion-button>
+  </ion-card>
+
+
+
+
 </ion-content>
