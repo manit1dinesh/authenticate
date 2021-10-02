@@ -1,0 +1,7 @@
+{
+  "name": "iWill",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
